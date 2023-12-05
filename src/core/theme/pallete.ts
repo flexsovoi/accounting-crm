@@ -48,7 +48,7 @@ export function palette(mode: 'light' | 'dark') {
 			purple: '#E5ECF6',
 			purple_50: '#E5ECF680',
 			light: WHITE[5],
-			background: BLACK[100],
+			bg: BLACK[100],
 		},
 		secondary: { ...COLORS },
 	}

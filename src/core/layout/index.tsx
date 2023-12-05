@@ -1,5 +1,6 @@
 import { FC, PropsWithChildren, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
+import GlobalStyles from '../../assets/styles/globalStyles'
 import { palette } from '../theme/pallete'
 
 const Layout: FC<PropsWithChildren<unknown>> = ({ children }) => {
@@ -8,6 +9,8 @@ const Layout: FC<PropsWithChildren<unknown>> = ({ children }) => {
 
 	return (
 		<ThemeProvider theme={theme}>
+			<GlobalStyles />
+
 			{
 				// Header
 			}
