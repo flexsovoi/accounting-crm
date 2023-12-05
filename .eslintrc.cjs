@@ -5,7 +5,17 @@ module.exports = {
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:react-hooks/recommended',
+		'plugin:import/errors',
+		'prettier'
 	],
+	settings: {
+		'import/resolver': {
+			alias: {
+				extensions: ['.ts', '.tsx'],
+				map: [['@/', './src']]
+			}
+		}
+	},
 	ignorePatterns: ['dist', '.eslintrc.cjs'],
 	parser: '@typescript-eslint/parser',
 	plugins: ['react-refresh'],
@@ -14,7 +24,7 @@ module.exports = {
 		'@typescript-eslint/no-unused-vars': 'off',
 		'react-refresh/only-export-components': [
 			'warn',
-			{ allowConstantExport: true },
-		],
-	},
+			{ allowConstantExport: true }
+		]
+	}
 }
