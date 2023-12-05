@@ -1,5 +1,7 @@
+import Layout from './core/layout'
+
 function App() {
-	return <div>Accounting CRM</div>
+	return <Layout>Accounting CRM</Layout>
 }
 
 export default App
