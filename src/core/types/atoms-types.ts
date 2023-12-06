@@ -22,6 +22,9 @@ export interface IFlex {
 	JC_end: boolean
 	AI_center: boolean
 	fullWidth: boolean
+	w: number | string
+	gap: number
+	bgc: CSSProperties['backgroundColor']
 }
 // TODO: сделать интерфейс как sx в mui
 
