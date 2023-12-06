@@ -31,6 +31,30 @@ export const FlexMixin: StyleFunction<Partial<IFlex>> = props => {
 			width: 100%;
 		`
 	}
+	if (props.gap) {
+		rules += `
+			gap: ${props.gap * props.theme.spaces.base}px;
+		`
+	}
+
+	if (props.w) {
+		if (typeof props.w == 'number') {
+			rules += `
+			width: ${props.w * props.theme.spaces.base}px;
+		`
+		}
+		if (typeof props.w == 'string') {
+			rules += `
+			width: ${props.w};
+		`
+		}
+	}
+	if (props.bgc) {
+		rules += `
+			background-color: ${props.bgc};
+		`
+	}
+
 	console.log(rules)
 	return rules
 }
